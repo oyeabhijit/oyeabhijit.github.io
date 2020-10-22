@@ -9,23 +9,40 @@
 
 .sec
 {
-    background-image: url(images/main_c.jpg);
+    background-image: url(images/main_d.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
 
 .secb
 {
-    background-image: url(images/main_b.jpg);
+    background: #000;
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
-.secc
+.secd
 {
     background-image: url(images/contact.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 50% auto;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+  }
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff; 
 }
 
 section

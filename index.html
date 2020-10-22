@@ -7,18 +7,35 @@
         <link rel="stylesheet"href="style.css">
     </head>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event){
+        if (this.hash !== ""){
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+        scrollTop: $(hash).offset().top
+        }, 500, function(){
+        window.location.hash = hash;
+                });
+                }
+            });
+        });
+    </script>
+    
     <body>
             <header>
                 <a href="#"><img src="images/logo.png" class=logo></a>
                 
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#section1">Home</a></li>
+                    <li><a href="#section2">About</a></li>
+                    <li><a href="#section3">Portfolio</a></li>
+                    <li><a href="#section4">Contact</a></li>
                 </ul>
             </header>
-        <section class="sec">
+        <section class="sec" id="section1">
                 <div class="textbox">
                     <h2>Richa Gupta.<br><span>Photographer</span></h2>
                 </div>
@@ -37,7 +54,7 @@
                 header.classList.toggle("sticky", window.scrollY > 0)
             })
         </script>
-        <section class="secb">
+        <section class="secb" id="section2">
                 <div class="content">
                     <div class="name">
                         <h2>Richa Gupta<br><span>Photographer</span></h2>
@@ -51,7 +68,7 @@
                 </div>
         </section>
         
-        <section>
+        <section class="secc" id="section3">
             <div class="portfolio">
                 <div class="worktext">
                     <h3>My Work</h3>
@@ -161,12 +178,12 @@
             </div>
         </section>
         
-        <section class="secc">
+        <section class="secd" id="section4">
                 <div class="contact">
                     <div class="contacttext">
                         <h4>CONTACT</h4>
                         <h5>Get In Touch:</h5>
-                        <a href="mailto:someone@example.com">richa.gupta@gmail.com</a>
+                        <a href="mailto:abhijitrout.dev@gmail.com">richa.gupta@gmail.com</a>
                     </div>
                 </div>
         </section>
@@ -176,8 +193,8 @@
                 <p>Designed by Abhijit</p>
             </div>
             <div class="credsocials">
-                    <a href="#" target="_blank"><img src="images/instagram_white.png"></a>
-                    <a href="#" target="_blank"><img src="images/github.png"></a>
+                    <a href="https://www.instagram.com/abhijitrout.dev/" target="_blank"><img src="images/instagram_white.png"></a>
+                    <a href="https://www.github.com/oyeabhijit/" target="_blank"><img src="images/github.png"></a>
                 </div>
         </footer>
     </body>
