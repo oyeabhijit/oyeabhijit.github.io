@@ -2,7 +2,7 @@
 This site is a sample project for my portfolio. (Work in Progress)
 <br>
 <strong>
-  Site Mockup Design <a href="https://www.behance.net/gallery/106492727/RICHA-GUPTA-WEBSITE" target="_blank"> here </a> 
+  Site Mockup Design <a href="https://www.behance.net/gallery/106492727/RICHA-GUPTA-WEBSITE" target="_blank"> here </a> <br>
   Website has been deployed <a href="https://richagupta.netlify.app/" target="_blank"> here </a> 
 </strong>
 <br>
