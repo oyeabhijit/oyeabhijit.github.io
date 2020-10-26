@@ -2,48 +2,71 @@
 <html lang="en">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7931BK1GC1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7931BK1GC1');
-</script>
-        <link rel="icon" href="images/favicon.png" type="image/gif" sizes="any">
-        <meta charset="utf-8">
-        <title>Richa Gupta Official</title>
-        <link rel="stylesheet"href="style.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7931BK1GC1">
+        </script>
+        
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7931BK1GC1');
+        </script>
+            <link rel="icon" href="images/favicon.png" type="image/gif" sizes="any">
+            <meta charset="utf-8">
+            <title>Richa Gupta Official</title>
+            <link rel="stylesheet"href="style.css">
+        
+        <style>
+            ::selection
+            {
+                color: #000;
+                background: #fff600;
+            }
+        </style>
+        
     </head>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
         $("a").on('click', function(event){
-        if (this.hash !== ""){
-        event.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-        scrollTop: $(hash).offset().top
-        }, 500, function(){
-        window.location.hash = hash;
+    
+            if (this.hash !== ""){
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top}, 500, function(){
+                        window.location.hash = hash;
                 });
                 }
             });
         });
+
+    
     </script>
     
     <body>
-            <header>
+        
+            
+        <header>
                 <a href="#"><img src="images/logo.png" class=logo <input type="button" onClick="location.reload(true);" VALUE="Refresh"></a>
                 
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a id="linky" href="#home">Home</a></li>
+                    <li><a id="linky" href="#about">About</a></li>
+                    <li><a id="linky" href="#work">Portfolio</a></li>
+                    <li><a id="linky" href="#contact">Contact</a></li>
                 </ul>
-            </header>
+            
+                    <div class="cursor"></div>
+                
+                <script type="text/javascript">
+                    $(document).on('click','ul li',function(){
+                        $(this).addClass('active').siblings().removeClass('active');
+                    })
+
+                </script>
+        </header>
         <section class="sec" id="home">
                 <div class="textbox">
                     <h2>Richa Gupta.<br><span>Photographer</span></h2>
@@ -206,5 +229,41 @@
                     <a href="https://www.github.com/oyeabhijit/" target="_blank"><img src="images/github.png"></a>
                 </div>
         </footer>
+        
+        <script>
+
+(function () {
+
+      const link = document.querySelectorAll('nav > .hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+
+})();
+
+</script>
+        
     </body>
 </html>
