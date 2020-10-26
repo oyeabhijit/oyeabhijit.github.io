@@ -15,7 +15,8 @@
     height: 15px;
     width: 15px;
     background-color: #fff600;
-    border-radius: 0%;
+    border-radius: 30%;
+    transform: rotate(45deg);
     mix-blend-mode: difference;
     transition: 0.08s ease;
 }
@@ -80,14 +81,16 @@ header
     justify-content: space-between;
     align-items: center;
     z-index: 100000;
+    background:none;
+    transition:background 500ms;
 }
 
 header.sticky
 {
     padding: 5px 100px;
     background: #000;
+    transition:background 700ms;
     filter: opacity(90%);
-    transition:background 0.3s;
     transform-origin: top;
 }
 
@@ -484,3 +487,32 @@ footer .credsocials > a > img{
     color:#fff600;
     transition: color 500ms;
 }
+
+i {
+    font-size: 31px;
+    color:white;
+    align-items: justify;
+    transition:color 1s, font-size 100ms;
+
+}
+
+i:hover{
+    color:#fff600;
+    transition:color 700ms;
+}
+
+.mlnk {
+    font-size: 31px;
+    color:white;
+    align-items: justify;
+    transition:color 1s, font-size 100ms;
+
+}
+
+.mlnk:hover{
+    color:#fff600;
+    transition:color 700ms;
+}
+
+
+
