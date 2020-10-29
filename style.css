@@ -87,7 +87,7 @@ header
 
 header.sticky
 {
-    padding: 5px 100px;
+    padding: 20px 100px;
     background: #000;
     transition:background 700ms;
     filter: opacity(90%);
